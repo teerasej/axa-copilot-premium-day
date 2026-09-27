@@ -1,15 +1,15 @@
 # Wrap-up and workplace transfer
 
-You have moved one fictional evidence pack through Copilot Chat, Excel, Word, Teams, Outlook, and PowerPoint. Use this page to decide what is safe and useful to try next.
+You have moved one fictional evidence pack through Copilot Chat, transparent Excel analysis, Word, portable communication drafts, a meeting source, and PowerPoint. Optional Python, direct Teams reference, Teams, and Outlook steps were used only where the tenant and a safe destination were ready.
 
 ## Output checklist
 
 <ul class="output-checklist">
   <li>A grounded brief that separates facts, assumptions, and open questions</li>
-  <li>A KPI workbook with a reviewed anomaly table and chart</li>
+  <li>A KPI workbook with visible formulas, reviewed changes, an anomaly table, and a checked chart</li>
   <li>A one-page decision brief with source references</li>
-  <li>An unsent follow-up draft with owners and due dates</li>
-  <li>An executive presentation with unsupported claims removed</li>
+  <li>A reviewed meeting request, Teams update, and Outlook follow-up draft</li>
+  <li>A five-slide executive presentation traced to an approved meeting source or the prepared recap</li>
 </ul>
 
 ## Choose your role lens

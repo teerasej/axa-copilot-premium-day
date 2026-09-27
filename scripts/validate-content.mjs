@@ -16,8 +16,12 @@ const requiredLocalePages = ['index.md', 'before-you-begin.md', 'files.md', 'wra
 const requiredArtifacts = [
   'Asteria_Operational_Context.docx',
   'Asteria_Service_KPI_28days.xlsx',
+  'Asteria_Email_Thread.docx',
+  'Asteria_Meeting_Chat.docx',
   'Asteria_Executive_Review_Transcript.vtt',
+  'Asteria_Teams_Meeting_Recap.docx',
   'Asteria_Decision_Brief_Starter.docx',
+  'Asteria_Communication_Checklist.docx',
   'Asteria_Copilot_Premium_Practice_Files.zip',
 ];
 
@@ -122,10 +126,41 @@ const minutes = (time) => {
 const learnerMinutes = learnerBlocks.reduce((total, [start, end]) => total + minutes(end) - minutes(start), 0);
 if (learnerMinutes !== 330) fail(`Timetable has ${learnerMinutes} learner minutes instead of 330`);
 
+const selectedExerciseChecks = [
+  ['docs/en/exercises/01-ground-the-brief.md', ['Turn `Work IQ` off', 'Turn `Work IQ` on', 'does not cite either Asteria practice file']],
+  ['docs/th/exercises/01-ground-the-brief.md', ['ปิด `Work IQ`', 'เปิด `Work IQ`', 'ไม่ได้อ้างอิงไฟล์ Asteria']],
+  ['docs/en/exercises/02-kpi-to-decision-brief.md', ['Review > Show Changes', 'Not shown in change history', 'Verified', 'Corrected', 'normal Excel formulas only', '50, 55, 58, and 52 hours', 'Save a Copy']],
+  ['docs/th/exercises/02-kpi-to-decision-brief.md', ['Review > Show Changes', 'Not shown in change history', 'Verified', 'Corrected', 'สูตร Excel ปกติเท่านั้น', '50, 55, 58 และ 52 ชั่วโมง', 'Save a Copy']],
+  ['docs/en/exercises/03-meeting-to-follow-up.md', ['Asteria_Teams_Meeting_Recap.docx', 'Do not attach the VTT file to Copilot', 'used the DOCX recap']],
+  ['docs/th/exercises/03-meeting-to-follow-up.md', ['Asteria_Teams_Meeting_Recap.docx', 'ไม่ต้อง Attach ไฟล์ VTT กับ Copilot', 'ใช้ DOCX recap']],
+  ['docs/en/exercises/04-evidence-to-executive-story.md', ['Route A', 'Route B', 'Agent Mode', 'Create presentation from file', 'Exactly five slides', 'Speaker Notes', 'To confirm']],
+  ['docs/th/exercises/04-evidence-to-executive-story.md', ['Route A', 'Route B', 'Agent Mode', 'Create presentation from file', '5 Slides เท่านั้น', 'Speaker Notes', 'To confirm']],
+];
+for (const [relativePath, phrases] of selectedExerciseChecks) {
+  const content = read(relativePath);
+  for (const phrase of phrases) {
+    if (!content.includes(phrase)) fail(`${relativePath} is missing selected-exercise requirement: ${phrase}`);
+  }
+}
+
+for (const locale of ['en', 'th']) {
+  const exercise3 = read(`docs/${locale}/exercises/03-meeting-to-follow-up.md`);
+  if (/reference `Asteria_Executive_Review_Transcript\.vtt`|อ้างอิง `Asteria_Executive_Review_Transcript\.vtt`/i.test(exercise3)) {
+    fail(`${locale} Exercise 3 incorrectly requires the VTT as a Copilot reference`);
+  }
+}
+
+for (const locale of ['en', 'th']) {
+  const preparation = read(`docs/${locale}/before-you-begin.md`);
+  const filesPage = read(`docs/${locale}/files.md`);
+  if (!preparation.includes(locale === 'en' ? 'eight files' : 'แปดรายการ')) fail(`${locale} preparation page has the wrong source-file count`);
+  if (!filesPage.includes('Asteria_Teams_Meeting_Recap.docx')) fail(`${locale} files page is missing the meeting recap`);
+}
+
 if (errors.length) {
   console.error(`Validation failed with ${errors.length} issue(s):`);
   for (const error of errors) console.error(`- ${error}`);
   process.exit(1);
 }
 
-console.log(`Validation passed: ${allMarkdown.length} Markdown pages, 2 locales, 4 mirrored exercises, 5 downloads.`);
+console.log(`Validation passed: ${allMarkdown.length} Markdown pages, 2 locales, 4 mirrored exercises, 9 downloads.`);

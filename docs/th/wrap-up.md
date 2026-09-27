@@ -1,15 +1,15 @@
 # สรุปและนำไปใช้กับงาน
 
-วันนี้เราได้ส่งต่อ Evidence Pack ชุดเดียวผ่าน Copilot Chat, Excel, Word, Teams, Outlook และ PowerPoint ใช้หน้านี้เพื่อเลือกสิ่งที่ปลอดภัยและมีประโยชน์สำหรับการทดลองครั้งถัดไป
+วันนี้เราได้ส่งต่อ Evidence Pack ชุดเดียวผ่าน Copilot Chat, การวิเคราะห์ Excel แบบโปร่งใส, Word, Portable Communication Draft, Meeting source และ PowerPoint ส่วน Python, Direct Teams reference, Teams และ Outlook เป็นทางเลือกเมื่อ Tenant และพื้นที่ฝึกพร้อมเท่านั้น
 
 ## Output checklist
 
 <ul class="output-checklist">
   <li>Grounded Brief ที่แยก Fact, Assumption และ Open Question</li>
-  <li>KPI workbook ที่มี anomaly table และกราฟซึ่งตรวจสอบแล้ว</li>
+  <li>KPI workbook ที่มี Formula, Change review, anomaly table และกราฟที่ตรวจสอบแล้ว</li>
   <li>Decision Brief หนึ่งหน้าที่ระบุ Source</li>
-  <li>Follow-up draft ที่ยังไม่ส่ง พร้อม Owner และ Due date</li>
-  <li>Executive presentation ที่นำ claim ซึ่งไม่มีหลักฐานออกแล้ว</li>
+  <li>Meeting Request, Teams Update และ Outlook Follow-up Draft ที่ตรวจสอบแล้ว</li>
+  <li>Executive presentation 5 Slides ที่ตรวจย้อนกลับไปยัง Meeting source ที่อนุมัติหรือ Recap ที่เตรียมไว้ได้</li>
 </ul>
 
 ## เลือกมุมมองตามบทบาท

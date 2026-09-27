@@ -2,6 +2,10 @@
 
 Bilingual Thai and English participant exercises for a one-day, cross-app Microsoft 365 Copilot workshop.
 
+## Learner site
+
+The GitHub Pages site is published from this repository through the manually dispatched `Deploy VitePress site to Pages` workflow.
+
 ## Local development
 
 ```bash
@@ -18,4 +22,4 @@ pnpm run docs:build
 
 ## Publication boundary
 
-This repository is local and has no remote. The Pages workflow is manual-dispatch only and has not been run. Live learner readiness requires a separate AXA tenant rehearsal.
+The Pages workflow is manual-dispatch only. A successful site deployment validates the static learner package; live learner readiness still requires a separate AXA tenant rehearsal.

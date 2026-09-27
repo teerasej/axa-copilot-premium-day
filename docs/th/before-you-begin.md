@@ -11,10 +11,16 @@
 1. Sign in ด้วยบัญชี AXA work account ไม่ใช่บัญชี Microsoft ส่วนตัว
 2. เปิด Copilot Chat จากช่องทางที่องค์กรอนุมัติได้
 3. เปิด OneDrive, Word, Excel, PowerPoint, Outlook และ Microsoft Teams ได้
-4. มองเห็น Copilot ใน Word, Excel, PowerPoint, Outlook และ Teams
+4. มองเห็น Copilot ใน Word, Excel และ PowerPoint ส่วน Advanced analysis ใน Excel, Direct Teams reference ใน PowerPoint และ Copilot ใน Outlook/Teams เป็นทางเลือกเสริม
 5. Upload ไฟล์สำหรับฝึกไปยัง OneDrive folder ของตนเองได้
 
-หากข้อใดใช้งานไม่ได้ ให้แจ้งวิทยากรก่อนเริ่ม และใช้ prepared transcript หรือวิธี copy-and-paste เมื่อได้รับคำแนะนำ
+หากความสามารถที่จำเป็นใช้งานไม่ได้ ให้แจ้งวิทยากรก่อนเริ่ม แบบฝึกหัดที่ 3 ใช้ไฟล์ที่เตรียมไว้เป็น Core path จึงไม่ต้องมี Mailbox หรือ Meeting ที่ตั้งค่าไว้ล่วงหน้า
+
+## ระดับความสามารถ
+
+- **Core file path:** เส้นทางหลักที่ใช้ Standard Copilot in Excel, Meeting recap ที่เตรียมไว้ ไฟล์สังเคราะห์ และผลงานแบบพกพา
+- **Tenant-enhanced path:** ทางเลือกในการใช้ Teams หรือ Outlook หลังผู้สอนยืนยันว่า App และพื้นที่ฝึกพร้อม
+- **Facilitator demo:** ผู้สอนสาธิตความสามารถข้ามแอปหลังทดสอบด้วยบัญชีผู้เรียนทั่วไปแล้ว ผู้เรียนไม่ต้องใช้เพื่อทำงานให้เสร็จ
 
 ## ฟีเจอร์ที่ไม่ได้ใช้ในเวิร์กชอปนี้
 
@@ -27,6 +33,7 @@
 - อย่ากดส่ง Outlook email หรือ meeting invitation ที่สร้างจากแบบฝึกหัด
 - ตรวจคำตอบของ Copilot ทุกครั้งก่อนนำไปใช้ต่อในแอปอื่น
 - หาก Source ไม่รองรับ claim ให้ระบุว่าเป็นข้อสันนิษฐานหรือนำออก
+- เมื่อแบบฝึกหัดให้ตรวจ Timestamp ให้เปิดไฟล์ `.vtt` ด้วยตนเอง Core path ไม่ได้กำหนดให้ Copilot ต้อง Attach หรืออ่านไฟล์ `.vtt`
 
 ## เตรียมโฟลเดอร์
 
@@ -37,7 +44,7 @@
    Asteria Copilot Workshop
    ```
 
-3. Upload ไฟล์ทั้งสี่รายการเข้า folder นี้
+3. Upload ไฟล์ทั้งแปดรายการเข้า folder นี้
 4. อย่าเปลี่ยนชื่อไฟล์ เพื่อให้ prompt ในแบบฝึกหัดถัดไปค้นหาไฟล์ได้ตรงกัน
 
 <div class="voice-card"><strong>พล:</strong> ไฟล์เหล่านี้เหมือนวัตถุดิบที่เตรียมไว้ก่อนทำอาหารครับ เมื่อทุกอย่างอยู่ถูกที่และใช้ชื่อเดิม การส่งต่องานข้ามแอปจะทำได้ง่ายขึ้นมาก</div>
@@ -46,7 +53,7 @@
 
 - [ ] ฉัน Sign in ด้วย work account แล้ว
 - [ ] ฉันเปิด Microsoft 365 apps ที่ต้องใช้ได้
-- [ ] ไฟล์ Asteria ทั้งสี่รายการอยู่ใน OneDrive folder แล้ว
+- [ ] ไฟล์ Asteria ทั้งแปดรายการอยู่ใน OneDrive folder แล้ว
 - [ ] ฉันเข้าใจว่าทุกคำตอบของ Copilot ต้องผ่านการตรวจสอบโดยคน
 
 [เริ่มแบบฝึกหัดที่ 1 →](./exercises/01-ground-the-brief)

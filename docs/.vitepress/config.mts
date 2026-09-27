@@ -3,23 +3,23 @@ import { withMermaid } from 'vitepress-plugin-mermaid'
 
 const exerciseLinksEn = [
   { text: '1. Ground the brief', link: '/en/exercises/01-ground-the-brief' },
-  { text: '2. KPI to decision brief', link: '/en/exercises/02-kpi-to-decision-brief' },
-  { text: '3. Meeting to follow-up', link: '/en/exercises/03-meeting-to-follow-up' },
-  { text: '4. Evidence to executive story', link: '/en/exercises/04-evidence-to-executive-story' }
+  { text: '2. Transparent KPI analysis', link: '/en/exercises/02-kpi-to-decision-brief' },
+  { text: '3. Communication to follow-up', link: '/en/exercises/03-meeting-to-follow-up' },
+  { text: '4. Meeting to executive deck', link: '/en/exercises/04-evidence-to-executive-story' }
 ]
 
 const exerciseLinksTh = [
   { text: '1. สร้าง Brief จากหลักฐาน', link: '/th/exercises/01-ground-the-brief' },
-  { text: '2. จาก KPI สู่ Decision Brief', link: '/th/exercises/02-kpi-to-decision-brief' },
-  { text: '3. จาก Meeting สู่ Follow-up', link: '/th/exercises/03-meeting-to-follow-up' },
-  { text: '4. จากหลักฐานสู่ Executive Story', link: '/th/exercises/04-evidence-to-executive-story' }
+  { text: '2. วิเคราะห์ KPI อย่างโปร่งใส', link: '/th/exercises/02-kpi-to-decision-brief' },
+  { text: '3. จาก Communication สู่ Follow-up', link: '/th/exercises/03-meeting-to-follow-up' },
+  { text: '4. จาก Meeting สู่ Executive Deck', link: '/th/exercises/04-evidence-to-executive-story' }
 ]
 
 export default withMermaid(defineConfig({
   lang: 'en-GB',
   title: 'AXA Microsoft 365 Copilot Premium Workshop',
   description: 'Bilingual participant exercises for a cross-app Microsoft 365 Copilot workshop',
-  base: '/axa-copilot-premium-workshop/',
+  base: '/axa-copilot-premium-day/',
   cleanUrls: true,
   lastUpdated: false,
   ignoreDeadLinks: [/^\/files\/.*\.(?:docx|xlsx)$/],

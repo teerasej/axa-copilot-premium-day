@@ -24,7 +24,7 @@ The leadership team asks what is happening, why it matters, and what decision is
 #### Steps
 
 1. Open Copilot Chat with your work account.
-2. Start a new chat without attaching or referencing a file.
+2. Turn `Work IQ` off, then start a new chat without attaching or referencing a file. This keeps the baseline grounded only in the prompt and any permitted web information.
 3. Paste this prompt and select `Send`.
 
    ```text
@@ -37,6 +37,7 @@ The leadership team asks what is happening, why it matters, and what decision is
 #### Checkpoint
 
 - You can point to at least three claims that are generic, inferred, or unsupported by the supplied evidence.
+- The answer does not cite either Asteria practice file.
 
 ### Practice 2 Ground the answer in authorized files
 
@@ -44,11 +45,12 @@ The leadership team asks what is happening, why it matters, and what decision is
 
 #### Steps
 
-1. Confirm that Work IQ is on in Copilot Chat. If you cannot find the control, ask the facilitator to verify your account.
+1. Turn `Work IQ` on in Copilot Chat. If you cannot find the control, ask the facilitator to verify your account.
 2. Start a new chat.
 3. Add both practice files with the available file picker or type `/` and select each file:
    - `Asteria_Operational_Context.docx`
    - `Asteria_Service_KPI_28days.xlsx`
+   If a recently uploaded file does not appear, open it once from OneDrive, wait briefly, and try the file picker again. Do not replace it with an unrelated work file.
 4. Paste the prompt below.
 
    ```text
@@ -115,4 +117,4 @@ The leadership team asks what is happening, why it matters, and what decision is
 
 <div class="voice-card"><strong>Pon:</strong> Grounding is like attaching receipts to an expense claim. A confident statement is not enough; the reviewer needs to see what supports it.</div>
 
-[← Before you begin](../before-you-begin) · [Exercise 2 KPI to decision brief →](./02-kpi-to-decision-brief)
+[← Before you begin](../before-you-begin) · [Exercise 2 Transparent KPI analysis →](./02-kpi-to-decision-brief)

@@ -8,7 +8,7 @@ This repository contains participant-facing exercise instructions for the AXA Mi
 
 - Current user instructions govern the course.
 - Microsoft Learn is the technical source of truth for Microsoft product capabilities, licensing, and prerequisites.
-- The Krungsri workshop is a learning-pattern reference only. Do not copy its client identity, business details, prompts, filenames, data, screenshots, or branded assets.
+- External workshop material is a learning-pattern reference only. Do not copy another client's identity, business details, prompts, filenames, data, screenshots, or branded assets.
 - Use only synthetic/public-safe learner data. Never add participant names, tenant URLs, customer data, health data, claims records, credentials, internal links, or unapproved AXA operational information.
 - Keep audience analysis and curriculum option papers in the private parent workspace, outside this learner repository.
 
@@ -16,7 +16,7 @@ This repository contains participant-facing exercise instructions for the AXA Mi
 
 Core exercises may use Copilot Chat, Work IQ, OneDrive, Word, Excel, Teams, Outlook, and PowerPoint.
 
-Do not add exercises for Agent Builder, Pre-Built Agents, Copilot Studio, Copilot Cowork, or Copilot Notebooks unless the user explicitly changes scope. Treat Copilot Pages, direct Teams references in PowerPoint, Python through Copilot in Excel, Copilot Search enhancements, and recent Outlook actions as capability-gated until tenant rehearsal proves them.
+Do not add exercises for Agent Builder, Pre-Built Agents, Copilot Studio, Copilot Cowork, or Copilot Notebooks unless the user explicitly changes scope. Standard Copilot editing in Excel and `Asteria_Teams_Meeting_Recap.docx` are core routes. The `.vtt` transcript is a human-verification source, not a required Copilot attachment. Treat Copilot Pages, direct Teams references through Agent Mode in PowerPoint, Python or Advanced analysis through Copilot in Excel, Copilot Search enhancements, and recent Outlook actions as tenant-enhanced until ordinary-learner rehearsal proves them. Every enhanced route must retain the documented core fallback.
 
 ## Bilingual contract
 

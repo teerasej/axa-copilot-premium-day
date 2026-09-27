@@ -18,12 +18,12 @@ features:
   - title: Verify before reuse
     details: Inspect calculations, charts, owners, dates, and sources before moving a result into the next app.
   - title: Build one connected output
-    details: Carry evidence through Excel, Word, Teams, Outlook, and PowerPoint without retyping the story.
+    details: Carry evidence through Excel, Word, portable Teams and Outlook drafts, and PowerPoint without retyping the story.
 ---
 
 ## Today’s journey
 
-You will work with Asteria Insurance, a fictional insurer. Each exercise produces an artifact that the next exercise uses.
+Hello, Welcome to the Microsoft 365 Copilot Premium Workshop! My name is Pon, your instructor. Today, you will work with Asteria Insurance, a fictional insurer. Each exercise produces an artifact that the next exercise uses.
 
 <div class="artifact-flow">
 
@@ -38,7 +38,7 @@ flowchart LR
 
 </div>
 
-<div class="voice-card"><strong>Pon:</strong> Copilot can move quickly, but you remain the reviewer. Treat every output like a draft from a capable colleague: check the evidence before it enters the next document.</div>
+<div class="voice-card"> Copilot can move quickly, but you remain the reviewer. Treat every output like a draft from a capable colleague: check the evidence before it enters the next document. <strong>- Pon</strong></div>
 
 ## Timetable
 
@@ -46,19 +46,19 @@ flowchart LR
 |---|---|
 | 09:00–10:30 | Ground an executive brief with Copilot Chat, Work IQ, and OneDrive files |
 | 10:30–10:45 | Break |
-| 10:45–12:00 | Find KPI anomalies in Excel and carry verified insights into Word |
+| 10:45–12:00 | Analyze transparently in Excel, inspect changes, and carry verified findings into Word |
 | 12:00–13:00 | Lunch |
-| 13:00–14:30 | Turn a Teams transcript into decisions and an Outlook follow-up |
+| 13:00–14:30 | Turn prepared email, chat, and transcript evidence into reviewed communication drafts |
 | 14:30–14:45 | Break |
-| 14:45–16:00 | Turn the evidence pack into a checked PowerPoint executive update |
+| 14:45–16:00 | Turn an approved Teams source or prepared meeting recap into a checked executive PowerPoint |
 
 ## Exercises
 
 <div class="journey-grid">
   <div class="journey-card"><h3>1. Ground the brief</h3><p>Compare a general answer with an answer grounded in authorized files.</p><a href="./exercises/01-ground-the-brief">Start Exercise 1</a></div>
-  <div class="journey-card"><h3>2. KPI to decision brief</h3><p>Find anomalies in Excel and transfer only verified evidence into Word.</p><a href="./exercises/02-kpi-to-decision-brief">Start Exercise 2</a></div>
-  <div class="journey-card"><h3>3. Meeting to follow-up</h3><p>Extract decisions and owners from a transcript, then prepare an unsent Outlook draft.</p><a href="./exercises/03-meeting-to-follow-up">Start Exercise 3</a></div>
-  <div class="journey-card"><h3>4. Evidence to executive story</h3><p>Create a concise PowerPoint update and remove every unsupported claim.</p><a href="./exercises/04-evidence-to-executive-story">Start Exercise 4</a></div>
+  <div class="journey-card"><h3>2. Transparent KPI analysis</h3><p>Inspect Copilot changes, verify formulas and chart sources, then transfer only checked evidence into Word.</p><a href="./exercises/02-kpi-to-decision-brief">Start Exercise 2</a></div>
+  <div class="journey-card"><h3>3. Communication to follow-up</h3><p>Use prepared email, chat, and transcript evidence to create reviewed Teams and Outlook drafts.</p><a href="./exercises/03-meeting-to-follow-up">Start Exercise 3</a></div>
+  <div class="journey-card"><h3>4. Meeting to executive deck</h3><p>Use an approved Teams source or prepared recap to create five checked executive slides.</p><a href="./exercises/04-evidence-to-executive-story">Start Exercise 4</a></div>
 </div>
 
 ## What you will finish with
@@ -66,7 +66,7 @@ flowchart LR
 - A grounded evidence brief
 - A reviewed KPI workbook and chart
 - A one-page leadership decision brief
-- An unsent follow-up email or meeting draft
-- A concise executive presentation ready for human review
+- A reviewed meeting request, Teams update, and Outlook follow-up draft
+- A five-slide executive presentation traced to its meeting source
 
 [Prepare your account and download the practice files →](./before-you-begin)
