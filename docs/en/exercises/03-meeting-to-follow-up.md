@@ -1,206 +1,146 @@
-# Exercise 3 From communication evidence to accountable follow-up
+# Exercise 3 Meeting and email recap to Action Plan
 
 ## Exercise Overview
 
-Asteria leaders need to move from scattered communication to a meeting, a confirmed decision record, and clear follow-up. You will work from prepared email, chat, meeting-recap, and transcript files, so the core exercise does not depend on a seeded Outlook mailbox or Teams meeting.
+Turn a meeting recap and email thread into a Word Action Plan, then draft a follow-up email. Use one Copilot Chat conversation throughout; you do not need to open Teams or Outlook
 
-> **License:** Microsoft 365 Copilot Premium is required for Copilot Chat and Word. Native Copilot experiences in Teams and Outlook depend on organizational policy, client version, and tenant rollout; they are enhancements, not completion requirements.
+> **License:** Microsoft 365 Copilot Premium is required for this workshop. Copilot Chat file generation depends on account availability; a manual Word fallback is provided. Native Teams and Outlook experiences are optional and require confirmed access and policy.
 
 ## Prerequisites
 
-- `Asteria_Email_Thread.docx` in OneDrive
-- `Asteria_Meeting_Chat.docx` in OneDrive
-- `Asteria_Teams_Meeting_Recap.docx` in OneDrive
-- `Asteria_Executive_Review_Transcript.vtt` in OneDrive
-- `Asteria_Communication_Checklist.docx` in OneDrive
-- `Asteria_Leadership_Decision_Brief.docx` from Exercise 2
-- Access to Copilot Chat and Word
-
-### Capability levels
-
-1. **Core file path:** Everyone completes the work with the prepared files, Copilot Chat, and Word.
-2. **Tenant-enhanced path:** If the facilitator confirms a safe practice destination, move the reviewed draft into Teams or Outlook and keep it unsent.
-3. **Facilitator demo:** Native Teams recap or Outlook thread-to-meeting features may be demonstrated only after rehearsal with an ordinary AXA learner account. They are not required learner steps.
-
-## Scenario 1 Prepare the decision meeting
-
-### Practice 1 Create a meeting request draft from communication evidence
-
-**Primary target:** Convert the prepared email and chat records into a decision-focused meeting request without treating proposals as approved actions.
-
-#### Steps
-
-1. Open Copilot Chat and reference:
+- Microsoft 365 Copilot Chat, OneDrive and Word for the web
+- **Files to use:**
+   - `Asteria_Teams_Meeting_Recap.docx`
    - `Asteria_Email_Thread.docx`
-   - `Asteria_Meeting_Chat.docx`
-2. Paste this prompt.
+   - Save both files in your OneDrive practice folder before you begin.
+- The original meeting chat and VTT transcript are optional references if a meeting detail needs clarification. Open the transcript manually; do not attach the VTT file to Copilot.
 
-   ```text
-   Goal: Prepare a meeting request for the Asteria executive service review.
+## Start here: Microsoft 365 Copilot Chat
 
-   Context: The email thread and meeting chat contain questions, constraints, and conditional offers. They do not contain an approved decision.
+Open Microsoft 365 Copilot Chat at your organization's approved entry point and start a **new chat**. Keep this conversation open for all three Practices. Use the supplied Asteria files, not your real mailbox or meetings.
 
-   Sources: Use only Asteria_Email_Thread.docx and Asteria_Meeting_Chat.docx.
+Your route is simple: recap in Chat → generate the Word Action Plan in Chat → draft the email in Chat. Open Word only to review or save the Action Plan.
 
-   Expected output:
-   - meeting title
-   - purpose in one sentence
-   - decision question
-   - four-item agenda
-   - participant roles, not email addresses
-   - pre-read files
-   - unresolved prerequisites
+## Scenario 1 Prepare the follow-up
 
-   Label every proposed action as proposed. Do not invent recipients, approvals, owners, dates, or outcomes.
-   ```
+### Practice 1 Recap the meeting and email
 
-3. Compare the draft with both source files. Remove any statement that turns support, concern, or a conditional offer into a decision.
-4. Save the reviewed result in Word as:
-
-   ```text
-   Asteria_Meeting_Request_Draft.docx
-   ```
-
-5. Use the `Meeting request review` section in `Asteria_Communication_Checklist.docx` and record at least one correction.
-6. **Tenant-enhanced path:** If the facilitator confirms that Outlook is ready, create a new calendar event and paste the reviewed content. Add no attendees and do not send it.
-
-#### Checkpoint
-
-- The request contains one decision question and four agenda items grounded in the files.
-- Proposals remain proposals; no meeting outcome is implied.
-- The saved draft contains no real recipients and remains unsent.
-
-## Scenario 2 Confirm the meeting outcome
-
-### Practice 2 Recover decisions and commitments from the meeting record
-
-**Primary target:** Draft a decision and action record from the prepared recap, then verify every commitment manually against transcript timestamps.
+**Primary target:** Create separate meeting and email summaries in Copilot Chat.
 
 #### Steps
 
-1. Open Copilot Chat and reference `Asteria_Teams_Meeting_Recap.docx`. If the file picker cannot find it, open the DOCX in Word and use Copilot in Word for this step.
-2. Paste this prompt.
+1. In your new **Copilot Chat** conversation, use the attachment / `Add Content` control available
+2. Select `Asteria_Teams_Meeting_Recap.docx` from OneDrive.
+   > If cloud selection is unavailable, download the file from OneDrive and use the local file-upload control.
+3. Ask for the meeting summary:
 
    ```text
-   Goal: Create an accountable record of the Asteria executive review.
-
-   Context: The recap is a portable meeting source. Every decision and commitment will be checked manually against the transcript before any follow-up is drafted.
-
-   Source: Use only Asteria_Teams_Meeting_Recap.docx.
-
-   Expected output:
-   1. Decisions made
-   2. Action items with owner and due date
-   3. Risks and dependencies
-   4. Questions that remain unresolved
-   5. The stated transcript timestamp for each decision and action
-
-   If the recap does not state an owner or due date, write Not stated. Do not infer one.
+   Summarise for me. Give me the key points, what was agreed, suggested actions and outstanding questions. Keep the owners and dates from the file. Use To confirm for missing details
    ```
 
-3. Open `Asteria_Executive_Review_Transcript.vtt` manually beside the result. Do not attach the VTT file to Copilot.
-4. Check every decision and action against its timestamp.
-5. Remove statements that were discussed but not agreed.
-6. Copy the corrected record into the end of `Asteria_Leadership_Decision_Brief.docx` under a new heading:
+4. Stay in the **same Copilot Chat conversation**
+5. Attach `Asteria_Email_Thread.docx` to the chat.
+6. Send:
 
    ```text
-   Confirmed meeting record
+   Now summarise Asteria_Email_Thread.docx separately from the meeting recap. What does the email confirm, suggest or leave unanswered? Keep the owners and dates from the email. Use To confirm for missing details and point out any difference from the meeting summary.
    ```
 
-7. **Facilitator demo:** If a native Teams recap has been rehearsed, compare it with the file-based record. Do not replace the transcript check.
+7. Spot-check the main agreement and one action's owner/date against the files. Ask Copilot to correct an obvious error.
 
-#### Checkpoint
+#### Quick check
 
-- Every decision and action has a matching transcript timestamp.
-- Discussion points are not mislabelled as decisions.
-- Missing owners or dates remain `Not stated`.
-- Copilot used the DOCX recap; a person used the VTT transcript for final verification.
+- Both summaries identify the main agreement and preserve an important owner/date.
+- Suggestions remain distinct from agreed actions.
 
-### Practice 3 Prepare the Teams update as a portable draft
+### Practice 2 Generate the Word Action Plan
 
-**Primary target:** Create and save a concise Teams-style update that communicates only confirmed decisions and actions.
+**Primary target:** Ask Copilot Chat to generate a downloadable Word Action Plan from the two recaps.
 
 #### Steps
 
-1. In Copilot Chat or Word, reference the confirmed meeting record in `Asteria_Leadership_Decision_Brief.docx`.
-2. Paste this prompt.
+1. Continue in the **same Copilot Chat conversation**. Use the two summaries above and ask:
 
    ```text
-   Goal: Draft a concise Teams update for the Asteria service-review team.
+   Combine the meeting and email recaps above into a short Action Plan. Create a word file named Asteria_Action_Plan.docx.
 
-   Source: Use only the Confirmed meeting record in Asteria_Leadership_Decision_Brief.docx.
+   Include a short summary of what was agreed, a table with Action, Owner and Due date, and an Outstanding questions section. Include the next decision point if the sources specify one; otherwise write To confirm.
 
-   Expected output:
-   - the confirmed decision
-   - up to three actions with owner and due date
-   - one unresolved dependency
-   - where the reviewed decision brief is stored
-
-   Use a clear, professional tone. Do not add new commitments. Write Not stated when the source does not provide an owner or date.
+   Use only the meeting and email content in this chat. Keep missing owners and dates as To confirm. If an action is only a suggestion, begin its Action text with Proposed: and keep any conditions. Do not invent commitments or resolve conflicting information yourself.
    ```
 
-3. Check the draft against the transcript timestamps and the `Teams update review` section of `Asteria_Communication_Checklist.docx`.
-4. Save the reviewed draft in Word as:
+2. Wait for the Word file to appear in the chat. If Copilot returns only text, ask once:
 
    ```text
-   Asteria_Teams_Update_Draft.docx
+   Please generate Asteria_Action_Plan.docx as a downloadable Word file using the Action Plan you just wrote. Keep the content unchanged.
    ```
 
-5. **Tenant-enhanced path:** If the facilitator has approved a practice chat or channel, paste the reviewed text into a new message. Keep it unsent. If no safe destination is confirmed, the Word file is the completed output.
+3. Open the file or preview.
+4. Look for the short summary, action table and outstanding questions. Ask for a correction if an important detail is wrong.
+5. Save the file in your OneDrive practice folder, uploading the download if needed. Open it in Word for the web, then return to the same Copilot Chat conversation for Practice 3.
 
-#### Checkpoint
+#### Fallback: Word file generation is unavailable
 
-- The update fits on one screen and contains no invented commitment.
-- The decision, actions, dates, and dependency match the confirmed meeting record.
-- A portable Word draft exists even when Teams is unavailable.
+Use this only if Chat cannot produce the downloadable file. Ask in the same chat:
 
-### Practice 4 Prepare the Outlook follow-up as a portable draft
+```text
+Show the same Action Plan here, including its summary, Action / Owner / Due date table and outstanding questions, so I can copy it into Word. Do not change its content.
+```
 
-**Primary target:** Create and save a follow-up email that makes ownership and unresolved items easy to review without requiring mailbox history.
+Open a blank document in Word for the web, copy in that content and save it in your OneDrive practice folder as:
+
+```text
+Asteria_Action_Plan.docx
+```
+
+Return to the same Copilot Chat conversation for the email draft.
+
+#### Quick check
+
+- `Asteria_Action_Plan.docx` opens in Word and is saved in OneDrive.
+- Missing owners and dates say `To confirm`; suggested actions remain labelled `Proposed:`.
+
+## Scenario 2 Draft the follow-up
+
+### Practice 3 Draft an email in Copilot Chat
+
+**Primary target:** Produce a clear internal follow-up email draft in Copilot Chat.
 
 #### Steps
 
-1. In Copilot Chat or Word, reference the confirmed meeting record in `Asteria_Leadership_Decision_Brief.docx`.
-2. Paste this prompt.
+1. Return to the **same Copilot Chat conversation**. Attach the saved `Asteria_Action_Plan.docx` so Copilot uses the final version, then send:
 
    ```text
-   Goal: Draft a follow-up email after the Asteria executive service review.
+   Draft an internal follow-up email using Asteria_Action_Plan.docx. Include a subject line, a short recap and up to 3 key actions with their owners and due dates. Mention outstanding questions and ask readers to reply with corrections or missing details.
 
-   Source: Use only the Confirmed meeting record in Asteria_Leadership_Decision_Brief.docx.
-
-   Expected output:
-   - Subject: Asteria service review decisions and next actions
-   - Decision confirmed
-   - Actions with owner and due date
-   - Dependency or item still to confirm
-   - Request for corrections before the next review
-
-   Keep the tone concise and accountable. Do not invent recipients, owners, dates, approvals, or commitments.
+   Keep suggested actions clearly labelled Proposed and missing details as To confirm. Use a friendly, professional tone. Do not add new commitments or recipients. Show the draft here in the chat only; do not send it or create a mailbox draft.
    ```
 
-3. Compare the result with the transcript and complete the `Outlook follow up review` and `Final safety gate` sections in `Asteria_Communication_Checklist.docx`.
-4. Save the reviewed draft in Word as:
-
+2. Read the draft and spot-check an important action, owner and date against the Action Plan. If the file cannot be read, paste its final content beneath the same prompt.
+3. (Optional) Send this prompt to ask Copilot to crate a draft in Outlook
    ```text
-   Asteria_Outlook_Follow_Up_Draft.docx
+   create a draft in my inbox, don't send it.
    ```
 
-5. **Tenant-enhanced path:** If Outlook is ready, select `New mail`, add no recipients, and use `Draft with Copilot` or paste the reviewed text. Keep the message unsent.
+#### Quick check
 
-#### Checkpoint
+- The draft's key actions match the Action Plan, including owners and dates.
+- The email is visible in Chat and remains unsent.
 
-- The subject and body match the confirmed record.
-- The message asks for corrections and does not claim final approval.
-- No real recipient has been added, and a portable Word draft exists.
+## Optional: Use your own Teams or Outlook source
+
+Only try this with facilitator/client approval and suitable information, privately and without screen sharing. Keep the entire real-work case separate from Asteria.
+
+Open your permitted meeting's recap or Copilot experience in **Teams**, and the related thread's summary or Copilot experience in **Outlook**, if available. Bring those summaries into a separate Copilot Chat conversation. Adapt the company and output names to your own case; never combine them with Asteria files or share the results in class. If access or suitability is uncertain, skip this option and use the supplied files. No message is sent on either route.
 
 ## Expected Output
 
-- `Asteria_Meeting_Request_Draft.docx`
-- A checked meeting record added to `Asteria_Leadership_Decision_Brief.docx`
-- `Asteria_Teams_Update_Draft.docx`
-- `Asteria_Outlook_Follow_Up_Draft.docx`
-- A completed `Asteria_Communication_Checklist.docx`
+- `Asteria_Action_Plan.docx` saved in OneDrive for Exercise 4
+- One unsent follow-up email draft visible in Copilot Chat
 
-<div class="voice-card"><strong>Pon:</strong> The prepared files are like a flight simulator: everyone can practice the same judgment safely. Teams and Outlook then become destinations for a reviewed draft, not sources the exercise must hope are available.</div>
+Exercise 4 uses this Action Plan and takes its KPI chart directly from your Exercise 2 dashboard/workbook.
 
-[← Exercise 2](./02-kpi-to-decision-brief) · [Exercise 4 Meeting to executive deck →](./04-evidence-to-executive-story)
+
+<div class="voice-card"><strong>Pon:</strong> Think of this chat as one conversation with an assistant: first catch up, then prepare the action list, then write the follow-up. You do not need to move desks for every request.</div>
+
+[← Exercise 2](./02-kpi-to-decision-brief) · [Exercise 4 →](./04-evidence-to-executive-story)

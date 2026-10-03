@@ -1,34 +1,25 @@
 import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 
+const siteBase = '/axa-copilot-premium-day/'
+
 const exerciseLinksEn = [
   { text: '1. Ground the brief', link: '/en/exercises/01-ground-the-brief' },
-  { text: '2. Transparent KPI analysis', link: '/en/exercises/02-kpi-to-decision-brief' },
-  { text: '3. Communication to follow-up', link: '/en/exercises/03-meeting-to-follow-up' },
-  { text: '4. Meeting to executive deck', link: '/en/exercises/04-evidence-to-executive-story' }
-]
-
-const exerciseLinksTh = [
-  { text: '1. สร้าง Brief จากหลักฐาน', link: '/th/exercises/01-ground-the-brief' },
-  { text: '2. วิเคราะห์ KPI อย่างโปร่งใส', link: '/th/exercises/02-kpi-to-decision-brief' },
-  { text: '3. จาก Communication สู่ Follow-up', link: '/th/exercises/03-meeting-to-follow-up' },
-  { text: '4. จาก Meeting สู่ Executive Deck', link: '/th/exercises/04-evidence-to-executive-story' }
+  { text: '2. Excel to executive dashboard', link: '/en/exercises/02-kpi-to-decision-brief' },
+  { text: '3. Recap to Action Plan', link: '/en/exercises/03-meeting-to-follow-up' },
+  { text: '4. Action Plan to executive deck', link: '/en/exercises/04-evidence-to-executive-story' },
+  { text: '5. Custom Agent demonstration', link: '/en/exercises/05-explore-ai-agents' }
 ]
 
 export default withMermaid(defineConfig({
   lang: 'en-GB',
   title: 'AXA Microsoft 365 Copilot Premium Workshop',
-  description: 'Bilingual participant exercises for a cross-app Microsoft 365 Copilot workshop',
-  base: '/axa-copilot-premium-day/',
+  description: 'Participant exercises for a cross-app Microsoft 365 Copilot workshop',
+  base: siteBase,
   cleanUrls: true,
   lastUpdated: false,
-  ignoreDeadLinks: [/^\/files\/.*\.(?:docx|xlsx)$/],
+  ignoreDeadLinks: [/^\/files\/.*\.(?:docx|xlsx)$/, /^\/files\/Asteria_Presentation_Template\.pptx$/],
   locales: {
-    root: {
-      label: 'Choose language',
-      lang: 'en-GB',
-      link: '/'
-    },
     en: {
       label: 'English',
       lang: 'en-GB',
@@ -58,35 +49,7 @@ export default withMermaid(defineConfig({
         darkModeSwitchLabel: 'Theme'
       }
     },
-    th: {
-      label: 'ไทย',
-      lang: 'th-TH',
-      link: '/th/',
-      themeConfig: {
-        nav: [
-          { text: 'หน้าหลัก', link: '/th/' },
-          { text: 'ก่อนเริ่ม', link: '/th/before-you-begin' },
-          { text: 'ไฟล์ฝึก', link: '/th/files' }
-        ],
-        sidebar: [
-          {
-            text: 'เริ่มต้นที่นี่',
-            items: [
-              { text: 'หน้าหลักและกำหนดการ', link: '/th/' },
-              { text: 'เตรียมตัวก่อนเริ่ม', link: '/th/before-you-begin' },
-              { text: 'ไฟล์สำหรับฝึก', link: '/th/files' }
-            ]
-          },
-          { text: 'แบบฝึกหัด', items: exerciseLinksTh },
-          { text: 'สรุป', items: [{ text: 'ทบทวนและนำไปใช้', link: '/th/wrap-up' }] }
-        ],
-        outline: { level: [2, 3], label: 'เนื้อหาในหน้านี้' },
-        docFooter: { prev: 'ก่อนหน้า', next: 'ถัดไป' },
-        returnToTopLabel: 'กลับด้านบน',
-        sidebarMenuLabel: 'เมนู',
-        darkModeSwitchLabel: 'ธีม'
-      }
-    }
+
   },
   head: [
     ['meta', { name: 'theme-color', content: '#12335b' }],
@@ -94,7 +57,7 @@ export default withMermaid(defineConfig({
   ],
   themeConfig: {
     siteTitle: 'Copilot Premium Workshop',
-    nav: [{ text: 'English / ไทย', link: '/en/' }],
+    nav: [{ text: 'Home', link: '/en/' }],
     outline: { level: [2, 3], label: 'On this page' },
     search: { provider: 'local' },
     docFooter: { prev: 'Previous', next: 'Next' },
@@ -103,7 +66,23 @@ export default withMermaid(defineConfig({
     darkModeSwitchLabel: 'Theme'
   },
   markdown: {
-    theme: { light: 'github-light', dark: 'github-dark' }
+    theme: { light: 'github-light', dark: 'github-dark' },
+    config(md) {
+      const renderLink = md.renderer.rules.link_open
+      md.renderer.rules.link_open = (tokens, index, options, env, renderer) => {
+        const href = tokens[index].attrGet('href') || ''
+        if (href.startsWith('/') && /\/files\/[^?#]+\.(?:docx|xlsx|vtt|zip|pptx)(?:[?#]|$)/i.test(href)) {
+          // File links must bypass client-side page routing.
+          tokens[index].attrSet('download', '')
+          if (href.startsWith('/files/')) {
+            tokens[index].attrSet('href', siteBase.slice(0, -1) + href)
+          }
+        }
+        return renderLink
+          ? renderLink(tokens, index, options, env, renderer)
+          : renderer.renderToken(tokens, index, options)
+      }
+    }
   },
   mermaid: {
     theme: 'base',

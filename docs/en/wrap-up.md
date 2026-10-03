@@ -1,15 +1,16 @@
 # Wrap-up and workplace transfer
 
-You have moved one fictional evidence pack through Copilot Chat, transparent Excel analysis, Word, portable communication drafts, a meeting source, and PowerPoint. Optional Python, direct Teams reference, Teams, and Outlook steps were used only where the tenant and a safe destination were ready.
+You have turned information from the files into a Word brief, Excel findings, a KPI dashboard, an Action Plan, an unsent email draft and an executive presentation. You observed a Custom Agent demonstration on the instructor's account.
 
 ## Output checklist
 
 <ul class="output-checklist">
-  <li>A grounded brief that separates facts, assumptions, and open questions</li>
-  <li>A KPI workbook with visible formulas, reviewed changes, an anomaly table, and a checked chart</li>
-  <li>A one-page decision brief with source references</li>
-  <li>A reviewed meeting request, Teams update, and Outlook follow-up draft</li>
-  <li>A five-slide executive presentation traced to an approved meeting source or the prepared recap</li>
+  <li>A Word brief with an executive summary, facts, assumptions and open questions; your own file or the prepared backup</li>
+  <li>A KPI workbook with findings, formulas, a line chart and complaint colours; your own file or the prepared backup</li>
+  <li>A three-slide KPI dashboard with a readable chart and one important number compared with Excel</li>
+  <li>A Word Action Plan saved in OneDrive and one unsent follow-up email draft visible in Copilot Chat</li>
+  <li>A five-slide executive presentation with the KPI chart, meeting highlights, actions and next steps</li>
+  <li>A possible Custom Agent application note</li>
 </ul>
 
 ## Choose your role lens
@@ -29,13 +30,15 @@ You have moved one fictional evidence pack through Copilot Chat, transparent Exc
 
 ## Record one safe next experiment
 
-Complete these four lines in your own notes:
+Complete these lines in your own notes:
 
 ```text
 Work task:
 Approved sources:
 Human review required:
 Evidence of a useful result:
+Suitable Copilot or agent option:
+Tenant or administrator dependency:
 ```
 
 > **Safety gate:** Use real work content only when its classification, permissions, and intended Copilot use are approved. A successful workshop exercise does not prove that a live operational workflow is ready.
