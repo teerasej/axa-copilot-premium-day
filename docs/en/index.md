@@ -1,5 +1,6 @@
 ---
 layout: home
+pageClass: presentation-home
 title: Microsoft 365 Copilot Premium Workshop
 hero:
   name: Evidence to decision
@@ -8,7 +9,10 @@ hero:
   actions:
     - theme: brand
       text: Prepare your files
-      link: /en/before-you-begin
+      link: /en/before-you-begin#prepare-your-files
+    - theme: alt
+      text: Start the journey
+      link: /en/exercises/01-ground-the-brief
 features:
   - title: Ground the work
     details: Use Copilot Chat, Work IQ, and authorized OneDrive files to separate facts from assumptions.
@@ -72,4 +76,4 @@ flowchart LR
 - A five-slide executive presentation with the KPI chart, meeting highlights, actions and next steps
 - One possible Custom Agent application note
 
-[Prepare your account and download the practice files →](./before-you-begin)
+[Prepare your account and download the practice files →](./before-you-begin#prepare-your-files)

@@ -95,3 +95,49 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* The presentation cover artwork belongs only to the landing hero. */
+.presentation-home .VPHero {
+  margin-top: 0;
+  margin-bottom: 48px;
+  padding-top: 80px;
+  background-color: #071630;
+  background-image: linear-gradient(90deg, rgba(3, 12, 35, 0.45), rgba(3, 12, 35, 0.08)), url('/images/copilot-premium-abstract-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  --vp-home-hero-name-color: #ffffff;
+  --vp-home-hero-name-background: none;
+  --vp-button-brand-border: #ffffff;
+  --vp-button-brand-text: #12335b;
+  --vp-button-brand-bg: #ffffff;
+  --vp-button-brand-hover-border: #e1efff;
+  --vp-button-brand-hover-text: #12335b;
+  --vp-button-brand-hover-bg: #e1efff;
+  --vp-button-brand-active-border: #c5e1f7;
+  --vp-button-brand-active-text: #12335b;
+  --vp-button-brand-active-bg: #c5e1f7;
+  --vp-button-alt-border: #b7d8f7;
+  --vp-button-alt-text: #ffffff;
+  --vp-button-alt-bg: #12335b;
+  --vp-button-alt-hover-border: #ffffff;
+  --vp-button-alt-hover-text: #ffffff;
+  --vp-button-alt-hover-bg: #1c527f;
+  --vp-button-alt-active-border: #ffffff;
+  --vp-button-alt-active-text: #ffffff;
+  --vp-button-alt-active-bg: #12335b;
+}
+.presentation-home .VPHero .text { color: #ffffff; }
+.presentation-home .VPHero .tagline { color: #e6efff; }
+.presentation-home .VPHero .VPButton:focus-visible {
+  outline-color: #ffffff;
+  box-shadow: 0 0 0 6px #071630;
+}
+@media (max-width: 639px) {
+  .presentation-home .VPHero {
+    margin-bottom: 32px;
+    padding-top: 48px;
+    background-image: linear-gradient(rgba(3, 12, 35, 0.45), rgba(3, 12, 35, 0.45)), url('/images/copilot-premium-abstract-background.png');
+    background-position: 35% center;
+  }
+}

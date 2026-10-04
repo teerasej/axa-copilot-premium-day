@@ -1,5 +1,7 @@
 # Session 5 Custom Agent demonstration
 
+<ExerciseHeaderImage src="/images/exercise-headers/05-explore-ai-agents.png" alt="An instructor introduces AI assistant capabilities to a group during a demonstration." />
+
 ## Session Overview
 
 Observe a prepared Custom Agent that helps review meeting evidence and draft an Action Plan. You do not create an agent in this workshop.

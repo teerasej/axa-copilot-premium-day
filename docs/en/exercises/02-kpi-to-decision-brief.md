@@ -1,5 +1,7 @@
 # Exercise 2 KPI analysis to executive dashboard
 
+<ExerciseHeaderImage src="/images/exercise-headers/02-analyze-transparently.png" alt="Two colleagues check spreadsheet evidence, charts and an unusual KPI result." />
+
 ## Exercise Overview
 
 Ask Excel for three insights, turn them into a useful worksheet and chart, then create a three-slide dashboard in PowerPoint. Finish with a quick comparison of the chart and one important number. No Python is required.
@@ -119,7 +121,7 @@ Use your saved workbook to create a short leadership snapshot.
 
 ### Fallback: Your reviewed Excel workbook is not ready
 
-[Download the reviewed KPI backup](/files/Asteria_Service_KPI_Reviewed_backup.xlsx) and upload it to OneDrive. Open `Reviewed Insights`, compare one number with `KPI_Data` and look at the chart's dates and hours. Use this file wherever the following steps or later exercises ask for `Asteria_Service_KPI_Reviewed.xlsx`.
+Open `Asteria_Service_KPI_Reviewed_backup.xlsx` from your OneDrive workshop folder’s `Prepared assets` subfolder. If you need another copy, [download the reviewed KPI backup](/files/Asteria_Service_KPI_Reviewed_backup.xlsx) and upload it to that subfolder. Open `Reviewed Insights`, compare one number with `KPI_Data` and look at the chart's dates and hours. Use this file wherever the following steps or later exercises ask for `Asteria_Service_KPI_Reviewed.xlsx`.
 
 Retain the `Prepared backup` label and filename. Its extra calculation and review fields can remain; you only need its findings and chart. It uses green complaint bands with the same count boundaries. Leave your own workbook untouched.
 
@@ -172,7 +174,7 @@ Copy the three findings from `Reviewed Insights` into the side panel beneath the
    ```
 
    Keep the original `Asteria_KPI_Dashboard.pptx` for later exercises.
-2. [Download the Asteria presentation template](/files/Asteria_Presentation_Template.pptx) and upload it to OneDrive. Open it to see its three examples.
+2. Open `Asteria_Presentation_Template.pptx` from your OneDrive workshop folder’s `Prepared assets` subfolder to see its three examples. If you need another copy, [download the Asteria presentation template](/files/Asteria_Presentation_Template.pptx) and upload it to that subfolder.
 3. In the comparison deck's Copilot side panel, use `Reference file` or the equivalent control to select the template as the **design reference**. Keep your reviewed workbook available for the numbers, then send:
 
    ```text

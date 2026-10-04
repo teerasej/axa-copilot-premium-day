@@ -1,5 +1,7 @@
 # Exercise 1 Ground the executive brief
 
+<ExerciseHeaderImage src="/images/exercise-headers/01-ground-the-work.png" alt="An executive reviews source documents beside a laptop to ground a leadership brief." />
+
 ## Exercise Overview
 
 Compare a general Copilot answer with an answer based on Asteria's files. Then create a Word brief and try a quick rewrite of its executive summary. Optional activities let you discover the project by name and prepare for your own meeting.
@@ -116,7 +118,7 @@ Asteria's leaders want to understand a service issue before their review meeting
 
 If Chat cannot generate the file, copy the brief into a blank Word document using the four headings above and save it with the same filename.
 
-If that is unavailable, [download the prepared backup brief](/files/Asteria_Grounded_Evidence_Brief.docx), upload it to OneDrive and open it in Word. Spot-check two facts and the reporting period, then continue. Retain its `Prepared backup` label and leave your own completed brief untouched. Its extra sections can remain; you do not need to fill in review notes. Ask the facilitator if you cannot open or save files.
+If that is unavailable, open `Asteria_Grounded_Evidence_Brief.docx` from your OneDrive workshop folder’s `Prepared assets` subfolder. If you need another copy, [download the prepared backup brief](/files/Asteria_Grounded_Evidence_Brief.docx) and upload it to that subfolder. Open it in Word. Spot-check two facts and the reporting period, then continue. Retain its `Prepared backup` label and leave your own completed brief untouched. Its extra sections can remain; you do not need to fill in review notes. Ask the facilitator if you cannot open or save files.
 
 #### Quick check
 

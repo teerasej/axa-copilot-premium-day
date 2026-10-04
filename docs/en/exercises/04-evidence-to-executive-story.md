@@ -1,5 +1,7 @@
 # Exercise 4 Action Plan to executive presentation
 
+<ExerciseHeaderImage src="/images/exercise-headers/04-build-executive-update.png" alt="An executive presents a five-part update with charts, decisions and next steps." />
+
 ## Exercise Overview
 
 Turn your meeting and email Action Plan into a five-slide leadership update in PowerPoint. Use the reviewed Excel workbook from Exercise 2 to complete the KPI snapshot so leaders can see the service pattern alongside the next actions.
@@ -19,7 +21,7 @@ The Action Plan does not need a KPI evidence section. Use it for the written sto
 
 Open PowerPoint for the web with your work account. Keep your OneDrive practice folder available so you can select the Action Plan.
 
-> **Missing the Action Plan?** [Download the supplied meeting recap](/files/Asteria_Teams_Meeting_Recap.docx), upload it to OneDrive, and select that file instead in Practice 1. Use the same prompt below. Check actions, owners and dates against the recap when finishing.
+> **Missing the Action Plan?** Select `Asteria_Teams_Meeting_Recap.docx` from your OneDrive workshop folder instead in Practice 1. If you need another copy, [download the supplied meeting recap](/files/Asteria_Teams_Meeting_Recap.docx) and upload it to that folder. Use the same prompt below. Check actions, owners and dates against the recap when finishing.
 
 ## Scenario 1 Prepare the leadership update
 
@@ -73,7 +75,7 @@ Stay in the blank PowerPoint presentation. Add five slides manually using the sa
 3. Open the **Copilot pane**.
 4. Use the **Add Content** button to select `Asteria_Service_KPI_Reviewed.xlsx` from your OneDrive practice folder. Confirm that the workbook's filename appears before continuing. If your pane cannot reference an Excel workbook, use the manual fallback below.
 
-   > **Workbook incomplete?** [Download the reviewed KPI backup](/files/Asteria_Service_KPI_Reviewed_backup.xlsx), upload it to OneDrive and select it instead. Use the same prompt below. Retain the backup filename and leave your own workbook unchanged.
+   > **Workbook incomplete?** Select `Asteria_Service_KPI_Reviewed_backup.xlsx` from your OneDrive workshop folder’s `Prepared assets` subfolder instead. If you need another copy, [download the reviewed KPI backup](/files/Asteria_Service_KPI_Reviewed_backup.xlsx) and upload it to that subfolder. Use the same prompt below. Retain the backup filename and leave your own workbook unchanged.
 
 5. Enter this request in the Copilot pane:
 

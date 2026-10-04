@@ -69,13 +69,18 @@ requireText('en/exercises/03-meeting-to-follow-up.md','do not attach the VTT fil
 const communication='en/exercises/03-meeting-to-follow-up.md';
 const communicationText=read(communication);
 const communicationPractices=communicationText.split(/^### Practice /m).slice(1);
-if(communicationPractices.length!==3) errors.push('Exercise 3 must have three focused Practices');
+if([...communicationText.matchAll(/^### Practice (\d+)/gm)].map(m=>m[1]).join(',')!=='1,2,3,4,5') errors.push('Exercise 3 must have three core Practices and two optional Practices numbered 1–5');
 for(const practice of communicationPractices) {
  const steps=practice.split('#### Steps')[1]?.split('#### Quick check')[0] ?? '';
  const firstStep=steps.match(/1\. ([^\n]+)/)?.[1] ?? '';
  if(!firstStep.includes('Copilot Chat')) errors.push('Each Exercise 3 Practice must explicitly start in Copilot Chat');
 }
-for(const t of ['## Start here: Microsoft 365 Copilot Chat','same Copilot Chat conversation','Create a word file named Asteria_Action_Plan.docx.','Please generate Asteria_Action_Plan.docx as a downloadable Word file','table with Action, Owner and Due date','Outstanding questions','Proposed:','Fallback: Word file generation is unavailable','OneDrive practice folder','subject line','chat only; do not send it or create a mailbox draft','## Optional: Use your own Teams or Outlook source','(Optional)','create a draft in my inbox, don\'t send it.']) requireText(communication,t);
+for(const t of ['## Start here: Microsoft 365 Copilot Chat','same Copilot Chat conversation','Create a word file named Asteria_Action_Plan.docx.','Please generate Asteria_Action_Plan.docx as a downloadable Word file','table with Action, Owner and Due date','Outstanding questions','Proposed:','Fallback: Word file generation is unavailable','OneDrive practice folder','subject line','chat only; do not send it or create a mailbox draft','## Optional: Use your own Outlook source','(Optional)','create a draft in my inbox, don\'t send it.']) requireText(communication,t);
+const meetingDiscovery=communicationPractices[3] ?? '';
+const meetingRecap=communicationPractices[4]?.split('## Optional: Use your own Outlook source')[0] ?? '';
+for(const t of ['fresh, private Copilot Chat conversation','Work IQ','Do not reuse the Asteria conversation','Find up to five past Teams meetings I attended that have both a recording and a transcript.','Only include meetings where you can confirm both are available.','Treat the list as suggestions','correct date, recording and transcript','Fallback: No suitable meeting is found','choose **Meetings**','skip this optional scenario','Automatic discovery of recording/transcript availability is not guaranteed']) if(!meetingDiscovery.includes(t)) errors.push('Exercise 3 meeting discovery missing '+t);
+for(const t of ['same private Copilot Chat conversation','correct occurrence as a work reference','Summarise this meeting using its transcript.','If you cannot access the transcript, tell me rather than guessing.','List up to three follow-up actions','To confirm','Proposed','compare one agreement or action with the transcript','private chat only','Exercise 4 does not depend on this scenario']) if(!meetingRecap.includes(t)) errors.push('Exercise 3 meeting recap missing '+t);
+requireText(communication,'## Scenario 3 Optional: Discover your own Teams meeting');
 if(/^\s*(Goal|Context|Source|Expected output):/m.test(communicationText)) errors.push('Exercise 3 prompts must use natural requests');
 if(/Asteria_(Teams_Update_Draft|Outlook_Follow_Up_Draft|Communication_Checklist)\.docx|Complete the.*checklist|add a verified KPI evidence section/i.test(communicationText)) errors.push('Exercise 3 retains an obsolete mandatory output or KPI evidence handoff');
 const presentation='en/exercises/04-evidence-to-executive-story.md';
@@ -87,7 +92,8 @@ if((presentationText.match(/^### Practice /gm)||[]).length!==2) errors.push('Exe
 if(/Speaker Notes|Trace every claim|source trail|Agent Mode|timestamp|workbook range|Communication_Checklist/.test(presentationText)) errors.push('Exercise 4 retains removed evidence paperwork or direct Teams branching');
 if(/^\s*(Goal|Context|Source|Expected output):/m.test(presentationText)) errors.push('Exercise 4 prompts must use natural requests');
 if(read(presentation).includes('Verified KPI evidence, with space for the checked dashboard chart')) errors.push('Exercise 4 still expects KPI evidence inside the Action Plan');
-requireText('en/before-you-begin.md','Start all three Exercise 3 Practices');
+requireText('en/before-you-begin.md','Start all three core Exercise 3 Practices');
+for(const t of ['Exercise 3 Scenario 3 adds two optional Practices','fresh private Copilot Chat conversation','recording and retained transcript are accessible']) requireText('en/before-you-begin.md',t);
 requireText('en/wrap-up.md','unsent follow-up email draft visible in Copilot Chat');
 requireText('en/exercises/04-evidence-to-executive-story.md','Asteria_Action_Plan.docx');
 const demo='en/exercises/05-explore-ai-agents.md';

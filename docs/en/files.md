@@ -6,9 +6,15 @@ All files contain synthetic information for Asteria Insurance, a fictional compa
 
 [Download the complete practice pack](/files/Asteria_Copilot_Premium_Practice_Files.zip)
 
-The ZIP contains **eleven files: eight source files, two prepared backups and one presentation template**. Extract it and upload the eight source files to your `Asteria Copilot Workshop` folder in OneDrive. Keep the prepared brief, reviewed KPI workbook and optional template separate until needed, so they do not replace your own exercise outputs.
+The ZIP contains **eleven files: eight source files, two prepared backups and one presentation template**. This single download includes every supplied sample and backup work file; no individual downloads are required.
 
-## Download individual files
+Extract the ZIP and upload the complete `Asteria Copilot Workshop` folder to your own work-account OneDrive. The eight source files are in the main folder. Both backups and the optional template are already inside `Prepared assets`, so they stay separate from your own exercise outputs. Wait for the upload to finish and check that all eleven files are present.
+
+[Follow the download, extraction and OneDrive upload instructions →](./before-you-begin#prepare-your-files)
+
+## Optional: Download individual files
+
+Use these links only if you need a single file again. All eleven files below are included in the complete ZIP.
 
 | File | Use in the workshop |
 |---|---|
@@ -26,20 +32,20 @@ The ZIP contains **eleven files: eight source files, two prepared backups and on
 
 ## When to use the backup brief
 
-If you cannot create the Exercise 1 brief, upload the backup to OneDrive with its filename unchanged. Open it in Word and spot-check two facts and the reporting period. Retain the `Prepared backup` label; its extra sections can remain and you do not need to complete review notes. Keep your own completed brief untouched.
+If you cannot create the Exercise 1 brief, open the backup in your OneDrive workshop folder’s `Prepared assets` subfolder. If you downloaded it individually, upload it to that subfolder with its filename unchanged. Open it in Word and spot-check two facts and the reporting period. Retain the `Prepared backup` label; its extra sections can remain and you do not need to complete review notes. Keep your own completed brief untouched.
 
 ## When to use the reviewed KPI backup
 
-If you cannot finish the Excel workbook, upload the backup to OneDrive. Open `Reviewed Insights`, compare one important number with `KPI_Data` and look at the chart's dates, hours and 48-hour SLA line. Its extra review fields are optional; use the findings and chart to continue.
+If you cannot finish the Excel workbook, open the backup in your OneDrive workshop folder’s `Prepared assets` subfolder. If you downloaded it individually, upload it to that subfolder. Open `Reviewed Insights`, compare one important number with `KPI_Data` and look at the chart's dates, hours and 48-hour SLA line. Its extra review fields are optional; use the findings and chart to continue.
 
 Use this file instead of `Asteria_Service_KPI_Reviewed.xlsx` in later steps. Retain its filename and `Prepared backup` label, and keep your own workbook untouched. The backup uses green complaint bands; the revised exercise uses red with the same count boundaries. Ask the facilitator about account or app access problems.
 
 ## When to use the presentation template
 
-Use it after completing the three-slide dashboard in Exercise 2. Upload it to OneDrive as a design reference and keep the workbook available for the numbers. Try it in `Asteria_KPI_Dashboard_Template_Comparison.pptx`; keep the original dashboard for later exercises. Referencing a PPTX and matching its style depend on rollout, so a manual fallback is provided.
+Use it after completing the three-slide dashboard in Exercise 2. Open it from your OneDrive workshop folder’s `Prepared assets` subfolder as a design reference, and keep the workbook available for the numbers. If you downloaded it individually, upload it to that subfolder first. Try it in `Asteria_KPI_Dashboard_Template_Comparison.pptx`; keep the original dashboard for later exercises. Referencing a PPTX and matching its style depend on rollout, so a manual fallback is provided.
 
 ## File-handling rule
 
 Keep the filenames unchanged. Work on your own copies and retain the originals so you can recover if an edit goes wrong.
 
-[Return to preparation →](./before-you-begin)
+[Return to preparation →](./before-you-begin#prepare-your-files)

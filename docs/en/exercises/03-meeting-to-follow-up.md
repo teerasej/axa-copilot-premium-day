@@ -1,8 +1,10 @@
 # Exercise 3 Meeting and email recap to Action Plan
 
+<ExerciseHeaderImage src="/images/exercise-headers/03-communicate-accountably.png" alt="Meeting, chat and email evidence comes together into an action record with an owner and date." />
+
 ## Exercise Overview
 
-Turn a meeting recap and email thread into a Word Action Plan, then draft a follow-up email. Use one Copilot Chat conversation throughout; you do not need to open Teams or Outlook
+Turn a meeting recap and email thread into a Word Action Plan, then draft a follow-up email. Use one Copilot Chat conversation for the three core Practices; you do not need to open Teams or Outlook for that route. The optional Scenario 3 starts a separate private chat to explore one of your own past Teams meetings.
 
 > **License:** Microsoft 365 Copilot Premium is required for this workshop. Copilot Chat file generation depends on account availability; a manual Word fallback is provided. Native Teams and Outlook experiences are optional and require confirmed access and policy.
 
@@ -17,7 +19,7 @@ Turn a meeting recap and email thread into a Word Action Plan, then draft a foll
 
 ## Start here: Microsoft 365 Copilot Chat
 
-Open Microsoft 365 Copilot Chat at your organization's approved entry point and start a **new chat**. Keep this conversation open for all three Practices. Use the supplied Asteria files, not your real mailbox or meetings.
+Open Microsoft 365 Copilot Chat at your organization's approved entry point and start a **new chat**. Keep this conversation open for the three core Practices. Use the supplied Asteria files, not your real mailbox or meetings.
 
 Your route is simple: recap in Chat → generate the Word Action Plan in Chat → draft the email in Chat. Open Word only to review or save the Action Plan.
 
@@ -127,11 +129,66 @@ Return to the same Copilot Chat conversation for the email draft.
 - The draft's key actions match the Action Plan, including owners and dates.
 - The email is visible in Chat and remains unsent.
 
-## Optional: Use your own Teams or Outlook source
+## Scenario 3 Optional: Discover your own Teams meeting
 
-Only try this with facilitator/client approval and suitable information, privately and without screen sharing. Keep the entire real-work case separate from Asteria.
+Only try this with facilitator/client approval and suitable information, privately and without screen sharing. Keep the entire real-work case separate from Asteria. Use your own work account with Microsoft 365 Copilot licensing and work grounding available. You need permission to access the selected meeting's retained recording and transcript; having attended a meeting does not guarantee that access.
 
-Open your permitted meeting's recap or Copilot experience in **Teams**, and the related thread's summary or Copilot experience in **Outlook**, if available. Bring those summaries into a separate Copilot Chat conversation. Adapt the company and output names to your own case; never combine them with Asteria files or share the results in class. If access or suitability is uncertain, skip this option and use the supplied files. No message is sent on either route.
+### Practice 4 Find and select a past meeting
+
+**Primary target:** Discover a suitable past Teams meeting with an accessible recording and transcript.
+
+#### Steps
+
+1. Start a **fresh, private Copilot Chat conversation**. Enable work grounding (`Work IQ` if shown, or the work-grounded experience available in your account). Do not reuse the Asteria conversation or attach its files.
+2. Ask Copilot to find meetings you can choose from:
+
+   ```text
+   Find up to five past Teams meetings I attended that have both a recording and a transcript. Show the meeting title, date and a source link so I can choose one. Only include meetings where you can confirm both are available. If you cannot confirm this, tell me.
+   ```
+
+3. Review the results and choose one meeting suitable for this private activity. Treat the list as suggestions, not proof that its recording and transcript are available.
+4. Open the meeting's source link. In its Teams meeting details or **Recap**, confirm the correct date, recording and transcript. For a recurring meeting, check the individual occurrence rather than the whole series. Return to your private Copilot Chat conversation.
+
+#### Fallback: No suitable meeting is found
+
+In the same private chat, type `/`, choose **Meetings** and search for a known past meeting by title or organizer. Select the correct occurrence, then check its recording and transcript through the meeting source. If the meeting picker, recording or transcript is unavailable, or the information is unsuitable, skip this optional scenario. You can finish every required exercise with the supplied Asteria files.
+
+Microsoft documents [referencing meetings in Copilot Chat](https://support.microsoft.com/en-us/microsoft-365-copilot/refer-to-specific-files-and-more-in-microsoft-365-copilot). Automatic discovery of recording/transcript availability is not guaranteed and needs tenant rehearsal. Do not change meeting policies or download and upload real transcripts to bypass an access problem.
+
+#### Quick check
+
+- One suitable meeting occurrence is selected, and you can access both its recording and transcript.
+
+### Practice 5 Ask about the selected meeting
+
+**Primary target:** Use the selected meeting's transcript as context for useful answers in Copilot Chat.
+
+#### Steps
+
+1. Continue in the **same private Copilot Chat conversation** from Practice 4. Type `/`, choose **Meetings**, search for the selected meeting and insert the correct occurrence as a work reference. Confirm that its title appears in your prompt before sending.
+2. With the meeting reference selected, send:
+
+   ```text
+   Summarise this meeting using its transcript. What was discussed, what was agreed and what still needs an answer? Keep suggestions separate from decisions. If you cannot access the transcript, tell me rather than guessing.
+   ```
+
+3. Follow up in the same chat:
+
+   ```text
+   List up to three follow-up actions from this meeting, with owners and due dates where stated. Use To confirm for missing details and label any actions you suggest yourself as Proposed.
+   ```
+
+4. Open a source reference where available and compare one agreement or action with the transcript in Teams. A response based only on calendar details or meeting chat is not evidence that Copilot read the transcript. If Copilot cannot access it, stop this optional route rather than filling gaps yourself.
+
+#### Quick check
+
+- One agreement or action matches the selected meeting's transcript, without invented owners or dates.
+
+Keep these results in your private chat only. Do not copy them into Asteria files, sample folders, shared screens or workshop submissions. Do not send messages or create invitations; Exercise 4 does not depend on this scenario.
+
+## Optional: Use your own Outlook source
+
+With the same facilitator/client approval and privacy rules, open a permitted thread's summary or Copilot experience in **Outlook**, if available. Bring that summary into a separate private Copilot Chat conversation. Adapt company and output names to your own case; never combine the result with Asteria files or share it in class. If access or suitability is uncertain, skip this option. No message is sent.
 
 ## Expected Output
 
