@@ -26,7 +26,7 @@ Asteria's leaders want to understand a service issue before their review meeting
 
 #### Steps
 
-1. Open **Copilot Chat**
+1. Open [Copilot Chat](https://m365.cloud.microsoft/chat)
 2. Turn `Work IQ` **off**
 3. Start a new chat without files.
 4. Send this prompt:
@@ -55,7 +55,7 @@ Asteria's leaders want to understand a service issue before their review meeting
    ```text
    Prepare a short leadership brief for Asteria's service review using only the two attached files.
 
-   Explain what happened, why it matters and one recommended next decision. Separate facts, assumptions and open questions. Include links to the files you used. Do not invent causes, owners, dates or targets.
+   Explain what happened, why it matters and one recommended next decision. Separate facts, assumptions and open questions. Do not invent causes, owners, dates or targets.
    ```
 
 5. Compare the reporting period and two important facts with the files. Ask Copilot to correct any obvious error, then compare this answer with Practice 1.
@@ -71,7 +71,7 @@ Asteria's leaders want to understand a service issue before their review meeting
 2. Try this prompt:
 
    ```text
-   Prepare a short leadership brief for Asteria Insurance service review. Explain what happened, why it matters and one recommended next decision. Separate facts, assumptions and open questions, and include links to the sources you found. Do not invent causes, owners, dates or financial effects.
+   Prepare a short leadership brief for Asteria Insurance service review. Explain what happened, why it matters and one recommended next decision. Separate facts, assumptions and open questions. Do not invent causes, owners, dates or financial effects.
    ```
 
 3. Open a citation to see whether it found the right project and reporting period. If it retrieves unrelated or sensitive work content, stop and keep that content off shared screens. An unsuccessful search is an acceptable outcome; discovery depends on access and file availability.
@@ -86,7 +86,7 @@ Asteria's leaders want to understand a service issue before their review meeting
 1. In the **explicit-file Copilot Chat** from Practice 2, request the Word file:
 
    ```text
-   Create an actual downloadable Word file named Asteria_Grounded_Evidence_Brief.docx from this brief.
+   Create a Word file named Asteria_Grounded_Evidence_Brief.docx from this brief.
 
    Use these exact four headings in this order:
    1. Executive summary
