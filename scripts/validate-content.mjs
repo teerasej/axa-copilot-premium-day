@@ -5,6 +5,9 @@ const errors = [];
 const slugs = ['01-ground-the-brief','02-kpi-to-decision-brief','03-meeting-to-follow-up','04-evidence-to-executive-story','05-explore-ai-agents'];
 const read = p => fs.readFileSync(path.join(docs,p),'utf8');
 const requireText = (p,text) => { if(!read(p).includes(text)) errors.push(p+' missing '+text); };
+// Accept both heading styles used in the approved learner content.
+const practicePattern = /^### (?:\(Optional\) )?Practice /m;
+const practiceNumbers = s => [...s.matchAll(/^### (?:\(Optional\) )?Practice (\d+)/gm)].map(m=>m[1]).join(',');
 const pages = [];
 function walk(dir) { for(const e of fs.readdirSync(dir,{withFileTypes:true})) { if(e.name==='public'||e.name.startsWith('.')) continue; const p=path.join(dir,e.name); if(e.isDirectory()) walk(p); else if(p.endsWith('.md')) pages.push(p); } }
 walk(docs);
@@ -23,8 +26,8 @@ for(const slug of slugs.slice(0,4)) {
  for(const h of ['## Exercise Overview','## Prerequisites','## Scenario','### Practice','#### Steps','#### Quick check','## Expected Output']) requireText(p,h);
  if(['01-ground-the-brief','02-kpi-to-decision-brief'].includes(slug)) requireText(p,'## Tips & tricks: Try one improved prompt');
  const count=re=>[...s.matchAll(re)].length;
- if(count(/^### Practice/gm)!==count(/^\*\*Primary target:/gm)||count(/^### Practice/gm)!==count(/^#### Quick check/gm)) errors.push(p+' has misaligned practices');
- for(const practice of s.split(/^### Practice /m).slice(1)) {
+ if(count(/^### (?:\(Optional\) )?Practice /gm)!==count(/^\*\*Primary target:/gm)||count(/^### (?:\(Optional\) )?Practice /gm)!==count(/^#### Quick check/gm)) errors.push(p+' has misaligned practices');
+ for(const practice of s.split(practicePattern).slice(1)) {
   const check=practice.split('#### Quick check')[1]?.split(/^#{2,4} /m)[0] ?? '';
   const items=[...check.matchAll(/^- /gm)].length;
   if(items<1||items>2) errors.push(p+' must have one or two Quick check items per Practice');
@@ -51,10 +54,10 @@ for(const t of ['Optional personal-work approval gate','Word for the web','do no
 requireText('en/exercises/02-kpi-to-decision-brief.md','Asteria_KPI_Dashboard.pptx');
 const kpi='en/exercises/02-kpi-to-decision-brief.md';
 const kpiText=read(kpi);
-if([...kpiText.matchAll(/^### Practice (\d+)/gm)].map(m=>m[1]).join(',')!=='1,2,3,1,2') errors.push('Exercise 2 must have three Excel Practices, then two PowerPoint Practices (the second optional)');
-const templatePractice=kpiText.split('### Practice 2 Optional: Add three Asteria-styled slides')[1]?.split('## Expected Output')[0] ?? '';
+if(practiceNumbers(kpiText)!=='1,2,3,1,2') errors.push('Exercise 2 must have three Excel Practices, then two PowerPoint Practices (the second optional)');
+const templatePractice=kpiText.split(practicePattern).slice(1)[4]?.split('## Expected Output')[0] ?? '';
 for(const t of ['Asteria_KPI_Dashboard_Template_Comparison.pptx','Reference file','design reference','Leave slides 1–3 unchanged','exactly six slides','Keep Source Formatting','manual fallback','Do not add causes or financial claims','To confirm']) if(!templatePractice.includes(t)) errors.push('Exercise 2 optional template practice missing '+t);
-for(const t of ['Tell me the top 3 insights and trends in this workbook.','Help me prepare this workbook','conditional formatting','F2:F29','light red for 0–10','medium red for 11–17','dark red for 18 or more','blank presentation','side panel','as a work item','Asteria_Service_KPI_Reviewed.xlsx','Fallback: Excel cannot be added as a work item','one important number','48-hour SLA']) requireText(kpi,t);
+for(const t of ['Tell me the top 3 insights and trends in this workbook.','Help me prepare this workbook','conditional formatting','F2:F29','three red shades','blank presentation','side panel','as a work item','Asteria_Service_KPI_Reviewed.xlsx','one important number','48-hour SLA']) requireText(kpi,t);
 if(/Review status|Needs more evidence|Speaker Notes|`Verified`|`Corrected`/.test(kpiText)) errors.push('Exercise 2 retains formal review-status or slide-source requirements');
 if(/^\s*(Goal|Context|Source|Expected output):/m.test(kpiText)) errors.push('Exercise 2 prompts must use natural requests without prompt-taxonomy labels');
 const excelPlan=kpiText.split('### Practice 2 ')[1]?.split('### Practice 3 ')[0] ?? '';
@@ -78,16 +81,16 @@ for(const practice of communicationPractices) {
 for(const t of ['## Start here: Microsoft 365 Copilot Chat','same Copilot Chat conversation','Create a word file named Asteria_Action_Plan.docx.','Please generate Asteria_Action_Plan.docx as a downloadable Word file','table with Action, Owner and Due date','Outstanding questions','Proposed:','Fallback: Word file generation is unavailable','OneDrive practice folder','subject line','chat only; do not send it or create a mailbox draft','## Optional: Use your own Outlook source','(Optional)','create a draft in my inbox, don\'t send it.']) requireText(communication,t);
 const meetingDiscovery=communicationPractices[3] ?? '';
 const meetingRecap=communicationPractices[4]?.split('## Optional: Use your own Outlook source')[0] ?? '';
-for(const t of ['fresh, private Copilot Chat conversation','Work IQ','Do not reuse the Asteria conversation','Find up to five past Teams meetings I attended that have both a recording and a transcript.','Only include meetings where you can confirm both are available.','Treat the list as suggestions','correct date, recording and transcript','Fallback: No suitable meeting is found','choose **Meetings**','skip this optional scenario','Automatic discovery of recording/transcript availability is not guaranteed']) if(!meetingDiscovery.includes(t)) errors.push('Exercise 3 meeting discovery missing '+t);
-for(const t of ['same private Copilot Chat conversation','correct occurrence as a work reference','Summarise this meeting using its transcript.','If you cannot access the transcript, tell me rather than guessing.','List up to three follow-up actions','To confirm','Proposed','compare one agreement or action with the transcript','private chat only','Exercise 4 does not depend on this scenario']) if(!meetingRecap.includes(t)) errors.push('Exercise 3 meeting recap missing '+t);
-requireText(communication,'## Scenario 3 Optional: Discover your own Teams meeting');
+for(const t of ['fresh, private Copilot Chat conversation','Work IQ','Do not reuse the Asteria conversation','past Teams meetings I attended that have both a recording and a transcript','Only include meetings where you can confirm both are available.','Treat the list as suggestions','correct date, recording and transcript','Automatic discovery of recording/transcript availability is not guaranteed']) if(!meetingDiscovery.includes(t)) errors.push('Exercise 3 meeting discovery missing '+t);
+for(const t of ['same private Copilot Chat conversation','correct occurrence as a work reference','Summarise this meeting','If you cannot access the transcript, tell me rather than guessing.','follow-up actions from this meeting, with owners and due dates where stated','compare one agreement or action with the transcript','private chat only','Exercise 4 does not depend on this scenario']) if(!meetingRecap.includes(t)) errors.push('Exercise 3 meeting recap missing '+t);
+if(!/^## .*Scenario 3.*Discover your own Teams meeting/m.test(communicationText)) errors.push('Exercise 3 must retain its optional meeting scenario');
 if(/^\s*(Goal|Context|Source|Expected output):/m.test(communicationText)) errors.push('Exercise 3 prompts must use natural requests');
 if(/Asteria_(Teams_Update_Draft|Outlook_Follow_Up_Draft|Communication_Checklist)\.docx|Complete the.*checklist|add a verified KPI evidence section/i.test(communicationText)) errors.push('Exercise 3 retains an obsolete mandatory output or KPI evidence handoff');
 const presentation='en/exercises/04-evidence-to-executive-story.md';
-for(const t of ['Action Plan does not need a KPI evidence section','leave space for me to insert the chart from my Exercise 2 dashboard','Open `Asteria_KPI_Dashboard.pptx` from Exercise 2 separately','do not ask Copilot to infer them from the Action Plan','## Start here: PowerPoint for the web','### Practice 1 Create five executive slides','### Practice 2 Complete the KPI snapshot and finish','Fallback: Copilot cannot create the presentation','/files/Asteria_Teams_Meeting_Recap.docx','/files/Asteria_Service_KPI_Reviewed_backup.xlsx','48-hour SLA','#### Quick check','Asteria_Executive_Update.pptx']) requireText(presentation,t);
+for(const t of ['Action Plan does not need a KPI evidence section','leave space for me to insert the chart','Do not infer KPI figures from this file','## Start here: PowerPoint for the web','### Practice 1 Create five executive slides','### Practice 2 Complete the KPI snapshot and finish','/files/Asteria_Teams_Meeting_Recap.docx','/files/Asteria_Service_KPI_Reviewed_backup.xlsx','48-hour SLA','#### Quick check','Asteria_Executive_Update.pptx']) requireText(presentation,t);
 const presentationText=read(presentation);
 const kpiSnapshot=presentationText.split('### Practice 2 Complete the KPI snapshot and finish')[1]?.split('## Expected Output')[0] ?? '';
-for(const t of ['Asteria_Service_KPI_Reviewed.xlsx','Confirm that the workbook\'s filename appears','Complete Slide 2, “KPI snapshot”, using the attached Excel workbook.','Add up to three short insights','Check that Slides 1, 3, 4 and 5 remain unchanged','Review any proposed changes','Remove any incorrect chart first','Fallback: Excel references, slide editing or chart generation are unavailable','workbook-supported KPI figures','Exactly five slides remain']) if(!kpiSnapshot.includes(t)) errors.push('Exercise 4 KPI snapshot missing '+t);
+for(const t of ['Asteria_Service_KPI_Reviewed.xlsx','Confirm that the workbook\'s filename appears','using the attached Excel workbook','Add up to three short insights','Check that Slides 1, 3, 4 and 5 remain unchanged','Review any proposed changes','workbook-supported KPI figures','Exactly five slides remain']) if(!kpiSnapshot.includes(t)) errors.push('Exercise 4 KPI snapshot missing '+t);
 if((presentationText.match(/^### Practice /gm)||[]).length!==2) errors.push('Exercise 4 must have exactly two focused Practices');
 if(/Speaker Notes|Trace every claim|source trail|Agent Mode|timestamp|workbook range|Communication_Checklist/.test(presentationText)) errors.push('Exercise 4 retains removed evidence paperwork or direct Teams branching');
 if(/^\s*(Goal|Context|Source|Expected output):/m.test(presentationText)) errors.push('Exercise 4 prompts must use natural requests');
@@ -109,7 +112,7 @@ for(const slug of slugs) requireText('th/exercises/'+slug+'.md',"/en/exercises/"
 const files=fs.readdirSync(path.join(docs,'public/files'));
 if(files.filter(x=>/\.(docx|xlsx|vtt|pptx)$/.test(x)).length!==11||!files.includes('Asteria_Copilot_Premium_Practice_Files.zip')||!files.includes('Asteria_Grounded_Evidence_Brief.docx')||!files.includes('Asteria_Service_KPI_Reviewed_backup.xlsx')||!files.includes('Asteria_Presentation_Template.pptx')) errors.push('Wrong practice package membership: expected eight sources, two backups and one template');
 for(const p of [brief,'en/exercises/02-kpi-to-decision-brief.md','en/files.md','en/before-you-begin.md']) requireText(p,'/files/Asteria_Grounded_Evidence_Brief.docx');
-requireText(brief,'Prepared backup');
+if(!/prepared backup/i.test(briefText)) errors.push('Exercise 1 must retain its prepared backup reference');
 for(const p of [kpi,'en/files.md','en/before-you-begin.md']) requireText(p,'/files/Asteria_Service_KPI_Reviewed_backup.xlsx');
 requireText(kpi,'Fallback: Your reviewed Excel workbook is not ready');
 requireText('en/files.md','eleven files: eight source files, two prepared backups and one presentation template');
