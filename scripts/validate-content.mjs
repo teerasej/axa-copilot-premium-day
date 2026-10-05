@@ -59,7 +59,7 @@ if(/Review status|Needs more evidence|Speaker Notes|`Verified`|`Corrected`/.test
 if(/^\s*(Goal|Context|Source|Expected output):/m.test(kpiText)) errors.push('Exercise 2 prompts must use natural requests without prompt-taxonomy labels');
 const excelPlan=kpiText.split('### Practice 2 ')[1]?.split('### Practice 3 ')[0] ?? '';
 const planPrompts=[...excelPlan.matchAll(/```text\n([\s\S]*?)```/g)].map(m=>m[1]);
-if(!planPrompts[0]?.includes('Help me prepare this workbook')||planPrompts[0]?.includes('Add a sheet')||!planPrompts[1]?.includes('Add a sheet called Reviewed Insights')||!planPrompts[1]?.includes('Do not change the workbook yet')) errors.push('Exercise 2 Practice 2 must split the opening request from the plan-refinement context');
+if(!planPrompts[0]?.includes('Help me prepare this workbook')||planPrompts[0]?.includes('Add a sheet')||!/Add a sheet called '?Reviewed Insights'?/.test(planPrompts[1] ?? '')||!planPrompts[1]?.includes('Keep the original data unchanged')) errors.push('Exercise 2 Practice 2 must split the opening request from the plan-refinement context and preserve source data');
 for(const t of ['choose `Plan`','Read Copilot’s questions or initial response','Review the updated plan','press **`Proceed`**','Fallback: Plan mode or Proceed is unavailable']) if(!excelPlan.includes(t)) errors.push('Exercise 2 plan-first flow missing '+t);
 if([...excelPlan.matchAll(/^(\d+)\. /gm)].map(m=>m[1]).join(',')!=='1,2,3,4,5') errors.push('Exercise 2 plan-first flow must retain five main steps');
 if(read('en/exercises/02-kpi-to-decision-brief.md').includes('Asteria_Leadership_Decision_Brief.docx')) errors.push('Exercise 2 still requires old Word handoff');

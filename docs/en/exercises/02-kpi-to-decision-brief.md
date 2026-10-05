@@ -26,19 +26,20 @@ Asteria's leaders want to understand the changes in claims turnaround, complaint
 
 #### Steps
 
-1. Open `Asteria_Service_KPI_28days.xlsx` from OneDrive in **Excel for the web**. Use the available copy control to save a working copy as:
+1. Open `Asteria_Service_KPI_28days.xlsx` from OneDrive in **Excel for the web**.
+2. Use the available copy control to save a working copy as:
 
    ```text
    Asteria_Service_KPI_Reviewed.xlsx
    ```
 
-2. Select a cell in `KPI_Data`, open `Copilot` and ask:
+3. Select a cell in `KPI_Data`, open `Copilot` and ask:
 
    ```text
    Tell me the top 3 insights and trends in this workbook.
    ```
 
-3. Read the response and find one important number in `KPI_Data`. Use `Definitions` if a metric is unfamiliar. Treat suggested causes as questions to investigate.
+4. Read the response and find one important number in `KPI_Data`. Use `Definitions` if a metric is unfamiliar. Treat suggested causes as questions to investigate.
 
 #### Quick check
 
@@ -59,16 +60,16 @@ Asteria's leaders want to understand the changes in claims turnaround, complaint
 2. Read Copilot’s questions or initial response before choosing `Proceed`. Answer any question using the workbook, then add this context:
 
    ```text
-   Add a sheet called Reviewed Insights with the three most useful findings. Include the dates, metric, values and comparison, using normal Excel formulas where useful.
+   Add a sheet called 'Reviewed Insights' with the 3 most useful findings. Include the dates, metric, values and comparisons.
 
-   Add a line chart comparing Claim TAT Hours with Claim SLA Hours by date. Label the vertical axis in hours. Keep the original data unchanged and do not guess causes.
-
-   Update the plan for me to review. Do not change the workbook yet.
+   Add a line chart comparing Claim TAT Hours with Claim SLA Hours by date. Label the vertical axis in hours. Keep the original data unchanged.
    ```
 
 3. Review the updated plan. If it covers the insights sheet and chart, press **`Proceed`**.
 4. Open `Reviewed Insights`. Compare one important number with `KPI_Data` and look at the chart's dates, hours and 48-hour SLA line. Ask for a correction if something is obviously wrong; use `Undo` for unwanted edits.
-5. Save the workbook. If only part was completed, try these smaller requests one at a time, reviewing any plan before choosing `Proceed`:
+5. Save the workbook.
+
+> If only part was completed, try these smaller requests one at a time, reviewing any plan before choosing `Proceed`:
 
    ```text
    Add Reviewed Insights with the three findings, dates, values, comparisons and normal Excel formulas. Keep the source data unchanged.
