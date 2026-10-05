@@ -104,12 +104,12 @@ Review a preview if offered; otherwise inspect the result and use `Undo` for unw
 2. Ask Copilot:
 
    ```text
-   Replace the existing conditional formatting on Complaint Count in KPI_Data, cells F2:F29, with three red shades: light red for 0–10, medium red for 11–17 and dark red for 18 or more. Keep the numbers unchanged and readable. Leave other columns unchanged.
+   Replace the existing conditional formatting on Complaint Count in KPI_Data, cells F2:F29, with three red shades. Leave other columns unchanged.
    ```
 
    Darker red means more complaints. These are display bands, not business targets.
 3. Look at three sample dates: 1 September (8) should be light, 14 September (13) medium and 21 September (24) dark.
-4. If Copilot cannot apply the colours, ask the facilitator to help create the same three rules using Excel's `Conditional Formatting` controls. Save the workbook and wait for OneDrive to finish saving.
+
 
 #### Quick check
 
@@ -124,45 +124,46 @@ Use your saved workbook to create a short leadership snapshot.
 
 Open `Asteria_Service_KPI_Reviewed_backup.xlsx` from your OneDrive workshop folder’s `Prepared assets` subfolder. If you need another copy, [download the reviewed KPI backup](/files/Asteria_Service_KPI_Reviewed_backup.xlsx) and upload it to that subfolder. Open `Reviewed Insights`, compare one number with `KPI_Data` and look at the chart's dates and hours. Use this file wherever the following steps or later exercises ask for `Asteria_Service_KPI_Reviewed.xlsx`.
 
-Retain the `Prepared backup` label and filename. Its extra calculation and review fields can remain; you only need its findings and chart. It uses green complaint bands with the same count boundaries. Leave your own workbook untouched.
-
 ### Practice 1 Create a three-slide KPI dashboard
 
 **Primary target:** Create a short PowerPoint dashboard from your Excel findings.
 
 #### Steps
 
-1. In **PowerPoint**, create a **blank presentation** and save it in OneDrive as:
+1. In [**PowerPoint**](https://powerpoint.cloud.microsoft/)
+2. create a **blank presentation** and save it in OneDrive as:
 
    ```text
    Asteria_KPI_Dashboard.pptx
    ```
 
-2. Open Copilot's **side panel**. Use `Add Content` or the equivalent control to add your saved reviewed Excel file **as a work item**. Check that the filename is your working copy or prepared backup.
-3. Send this prompt:
+3. Open Copilot's **side panel**. 
+4. Use `Add Content` or the equivalent control to add your saved reviewed Excel file **as a work item**. 
+5. Check that the filename is your working copy or prepared backup.
+6. Send this prompt:
 
    ```text
-   Create a three-slide executive KPI dashboard for Asteria’s service review using the attached workbook:
+   Create  3 slide executive KPI dashboard for Asteria’s service review using the attached workbook:
    1. KPI overview: reporting period and three main indicators.
    2. Service trend: the claims turnaround chart, SLA line and a short explanation. Leave space for me to insert the Excel chart if you cannot reuse it accurately.
    3. Decision discussion: main findings, open questions and one decision needed.
 
-   Use only the workbook's information. Do not invent causes or financial effects. Keep missing details as To confirm.
+   Use only the workbook's information. Do not invent causes or financial effects.
    ```
 
-4. Answer Copilot's questions if shown, then create the slides. If the chart is missing or differs from Excel, paste the Excel chart onto Slide 2, or insert a readable image of it.
-5. Compare the chart and one important number with Excel. Correct obvious errors, keep exactly three slides and save the dashboard.
+7. Answer Copilot's questions if shown, then create the slides. 
+8. If the chart is missing or differs from Excel
+   1. paste the Excel chart onto Slide 2, or insert a readable image of it.
+9.  Compare the chart and one important number with Excel. Correct obvious errors, keep exactly three slides and save the dashboard.
 
-#### Fallback: Excel cannot be added as a work item
 
-Copy the three findings from `Reviewed Insights` into the side panel beneath the same prompt. Insert the chart yourself. If Copilot cannot create slides, add three slides manually using the same outline.
 
 #### Quick check
 
 - The three-slide dashboard has a readable chart and one important number that matches Excel.
 - It ends with a clear decision question and is saved in OneDrive.
 
-### Practice 2 Optional: Add three Asteria-styled slides
+### (Optional) Practice 2 : Add three Asteria-styled slides
 
 **Primary target:** Try a presentation template on three new slides in a copy of the dashboard.
 

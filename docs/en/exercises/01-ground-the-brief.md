@@ -116,9 +116,7 @@ Asteria's leaders want to understand a service issue before their review meeting
 
 #### File-generation fallback
 
-If Chat cannot generate the file, copy the brief into a blank Word document using the four headings above and save it with the same filename.
-
-If that is unavailable, open `Asteria_Grounded_Evidence_Brief.docx` from your OneDrive workshop folder’s `Prepared assets` subfolder. If you need another copy, [download the prepared backup brief](/files/Asteria_Grounded_Evidence_Brief.docx) and upload it to that subfolder. Open it in Word. Spot-check two facts and the reporting period, then continue. Retain its `Prepared backup` label and leave your own completed brief untouched. Its extra sections can remain; you do not need to fill in review notes. Ask the facilitator if you cannot open or save files.
+If Chat cannot generate the file, open `Asteria_Grounded_Evidence_Brief.docx` from your OneDrive workshop folder’s `Prepared assets` subfolder.
 
 #### Quick check
 
@@ -170,10 +168,10 @@ Use this only with **facilitator/client approval** and suitable work information
 
 ## Tips & tricks: Try one improved prompt
 
-In the file-based chat, try:
+In the file-based chat (which generates the brief from the attached files), try:
 
 ```text
-Make this leadership brief easier to scan. Put the three main points first and end with one decision question. Keep the facts and missing information unchanged.
+Make this leadership brief easier to scan. Put the three main points first and end with one decision question.
 ```
 
 Keep it if the message is clearer. No extra file is required.

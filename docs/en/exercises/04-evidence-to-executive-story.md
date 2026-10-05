@@ -37,14 +37,19 @@ Open PowerPoint for the web with your work account. Keep your OneDrive practice 
 3. Enter this request.
 
    ```text
-   Create a concise five-slide leadership update using the attached file for the written content:
+   Create a concise 5 slide leadership update 
+
    1. Main decision, or the decision needed if none has been agreed
-   2. KPI snapshot: leave space for me to insert the chart from my Exercise 2 dashboard
+   2. KPI snapshot: leave space for me to insert the chart 
    3. Meeting and email highlights available in the file
    4. Actions, owners and due dates
    5. Open questions and next steps
 
-   Keep the wording short and easy to present. Do not infer KPI figures from this file or generate a replacement chart. Keep proposals labelled Proposed and missing details labelled To confirm. Do not invent decisions, owners, dates, causes, approvals or financial effects.
+   Keep the wording short and easy to present. Do not infer KPI figures from this file or generate a replacement chart. 
+   
+   Keep proposals labelled Proposed and missing details labelled To confirm. 
+   
+   Do not invent decisions, owners, dates, causes, approvals or financial effects.
    ```
 
 4. Review the outline if one appears, then generate the slides.
@@ -55,9 +60,6 @@ Open PowerPoint for the web with your work account. Keep your OneDrive practice 
    Asteria_Executive_Update.pptx
    ```
 
-#### Fallback: Copilot cannot create the presentation
-
-Stay in the blank PowerPoint presentation. Add five slides manually using the same outline, and copy the relevant summary and actions from your Action Plan or supplied recap. Leave Slide 2's chart space empty for Practice 2. Save with the filename above. Ask the facilitator for help if you cannot open or save files; do not change organization policies or switch to a personal account.
 
 #### Quick check
 
@@ -80,7 +82,7 @@ Stay in the blank PowerPoint presentation. Add five slides manually using the sa
 5. Enter this request in the Copilot pane:
 
    ```text
-   Complete Slide 2, “KPI snapshot”, using the attached Excel workbook.
+   Complete “KPI snapshot” slide, using the attached Excel workbook.
 
    Add up to three short insights about the service trends. Include a chart comparing daily claims turnaround hours with the SLA hours from the workbook. Make the reporting dates, hours and SLA line easy to read.
 
@@ -91,14 +93,6 @@ Stay in the blank PowerPoint presentation. Add five slides manually using the sa
    > If Copilot only suggests content instead of editing the slide, add the supported content to Slide 2 manually. Check that Slides 1, 3, 4 and 5 remain unchanged; undo any unwanted changes.
 
 7. Save `Asteria_Executive_Update.pptx` in OneDrive.
-
-#### Fallback: Excel references, slide editing or chart generation are unavailable
-
-Keep the five-slide executive update open. Open your reviewed workbook in **Excel for the web** and manually add up to three short insights supported by its figures to Slide 2. For KPI numbers, do not ask Copilot to infer them from the Action Plan or recreate the chart from that file.
-
-Open `Asteria_KPI_Dashboard.pptx` from Exercise 2 separately in **PowerPoint**. Copy its **claims-turnaround/SLA chart**, return to Slide 2 of the executive update, and paste it into the reserved space. Remove any incorrect chart first and resize the replacement so its title, dates, hours and SLA line are readable.
-
-If the chart cannot be copied, use the claims-turnaround/SLA chart from the reviewed workbook in **Excel for the web**. Copy it, or capture/export a readable image and insert that image on Slide 2 using PowerPoint's `Insert > Pictures` control. If using the reviewed KPI backup, find its chart on `Reviewed Insights`. Keep the editable original in Excel. Finish with the same quick checks and save; this fallback does not demonstrate successful Excel referencing or slide editing by Copilot.
 
 #### Quick check
 
